@@ -1,0 +1,150 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: {
+    typeName: 'Travel', 
+    typeNamePlural: 'Travels'
+  }
+}
+annotate view ZC_RAP100_ATRAVZA2 with
+{
+  @UI.facet: [ {
+    id: 'idIdentification', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Travel', 
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+   @UI.selectionField: [ {
+    position: 10 
+  } ]
+  TravelID;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 20 
+  } ]
+     @UI.selectionField: [ {
+    position: 20 
+  } ]
+  AgencyID;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 30 
+  } ]
+     @UI.selectionField: [ {
+    position: 30 
+  } ]
+  CustomerID;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  BeginDate;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  EndDate;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  BookingFee;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  TotalPrice;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  CurrencyCode;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  Description;
+  
+   @UI: {
+      lineItem:       [ { position: 100, importance: #HIGH }                          
+                        //,{ type: #FOR_ACTION, dataAction: 'copyTravel', label: 'Copy Travel' } 
+                        //,{ type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' }
+                        //,{ type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' }
+           ],
+      identification: [ { position: 100 }                          
+                       ,{ type: #FOR_ACTION, dataAction: 'deductDiscount', label: 'Deduct Discount' } 
+                       //,{ type: #FOR_ACTION, dataAction: 'acceptTravel', label: 'Accept Travel' }
+                       //,{ type: #FOR_ACTION, dataAction: 'rejectTravel', label: 'Reject Travel' }
+           ],
+        textArrangement: #TEXT_ONLY
+      }
+  OverallStatus;
+  
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  Attachment;
+  
+  @UI.lineItem: [ {
+    position: 120 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  MimeType;
+  
+  @UI.lineItem: [ {
+    position: 130 , 
+    importance: #MEDIUM
+  } ]
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  FileName;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}
